@@ -1,7 +1,6 @@
 package com.dev.android.serverchecksdk;
 
-import static com.dev.android.serverchecksdk.ServerErrorActivity.decodeBase64;
-
+import android.util.Base64;
 import android.util.Log;
 
 import retrofit2.Call;
@@ -44,5 +43,10 @@ public class ServerObj {
 
             }
         });
+    }
+
+    public static String decodeBase64(String encodedString) {
+        byte[] decodedBytes = Base64.decode(encodedString, Base64.DEFAULT);
+        return new String(decodedBytes);
     }
 }
