@@ -2,18 +2,17 @@ package com.dev.android.serverchecksdk;
 
 import android.util.Base64;
 import android.util.Log;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ServerObj {
 
-    public void checkServer(String userAgent,String baseUrl,String endPoint, ServerCheckCallback serverCallback) {
-        ServerRetrofitInstance.userAgent = userAgent;
-        ServerRetrofitInstance.baseurl = decodeBase64(baseUrl);
+    public void initServer(String userAgent,String baseUrl,String endPoint, ServerCheckCallback serverCallback) {
+        ServerRetrofitInstance instance = new ServerRetrofitInstance(userAgent,decodeBase64(baseUrl));
 
-        Call<ServerStatus> callback = ServerRetrofitInstance.api.serverStatus(decodeBase64(endPoint));
+        ServerAPI apiInstance = instance.api;
+        Call<ServerStatus> callback = apiInstance.serverStatus(decodeBase64(endPoint));
 
         callback.enqueue(new Callback<ServerStatus>() {
             @Override
@@ -27,7 +26,7 @@ public class ServerObj {
                     if (!"Error".equals(status)) {
                         serverCallback.onResult(true,status);
                     } else {
-                        Util.companion.backUpSite = Util.companion.serverBackup;
+                        Util.companion.backUpSite = decodeBase64(baseUrl)+decodeBase64(endPoint)+"/server";
                         serverCallback.onResult(false,"Error");
                     }
                 } else {
