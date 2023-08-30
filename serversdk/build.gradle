@@ -48,15 +48,29 @@ dependencies {
 }
 
 afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
+    android.libraryVariants.each { variant ->
+        publishing.publications.create(variant.name,MavenPublication) {
+            from components.findByName(variant.name)
 
-                groupId = 'com.github.jacobLsky1'
-                artifactId = 'adroid-dev-util'
-                version = '1.0'
-            }
+            groupId = 'com.github.jacobLsky1'
+            artifactId = 'adroid-dev-util'
+            version = '1.0'
+
         }
     }
 }
+
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                from components["release"]
+//
+//                groupId = 'com.github.jacobLsky1'
+//                artifactId = 'adroid-dev-util'
+//                version = '1.0'
+//
+//            }
+//        }
+//    }
+//}
