@@ -1,5 +1,6 @@
 package com.dev.android.appConfigSdk.services.retrofit;
 
+import com.dev.android.appConfigSdk.data.config.AppConfigResponse;
 import com.dev.android.appConfigSdk.services.apis.ServerAPI;
 import com.dev.android.appConfigSdk.services.intercepters.HeaderInterceptor;
 import com.google.gson.Gson;
@@ -18,6 +19,7 @@ public class ServerRetrofitInstance {
     private String baseurl;
     private static final Gson gson = new GsonBuilder()
             .setLenient()
+            .registerTypeAdapter(AppConfigResponse.class, new AppConfigResponseInstanceCreator())
             .create();
     private Retrofit retrofit;
     public final ServerAPI api;
