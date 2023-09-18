@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_config_matchViewHolder1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/secondaryColor">
+
+
+    <ImageView
+        android:id="@+id/app_config_matchLocalTeamIV1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchLeagueIV1"
+        app:srcCompat="@drawable/football" />
+
+    <ImageView
+        android:id="@+id/app_config_matchVisitorTeamIV1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchLocalTeamIV1"
+        app:srcCompat="@drawable/football" />
+
+    <TextView
+        android:id="@+id/app_config_matchLocalTeamTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="home"
+        android:textColor="@color/textColor"
+        android:textSize="10sp"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/app_config_matchLocalTeamIV1"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchLocalTeamIV1"
+        app:layout_constraintTop_toTopOf="@+id/app_config_matchLocalTeamIV1" />
+
+    <TextView
+        android:id="@+id/app_config_matchVisitorTeamTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="visitor"
+        android:textColor="@color/textColor"
+        android:textSize="10sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/app_config_matchVisitorTeamIV1"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchVisitorTeamIV1"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchLocalTeamIV1" />
+
+    <ImageView
+        android:id="@+id/app_config_matchLeagueIV1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <TextView
+        android:id="@+id/app_config_matchLeagueTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="league"
+        android:textAlignment="textStart"
+        android:textColor="@color/textColor"
+        android:textSize="8sp"
+        android:layout_marginStart="4dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/app_config_matchLeagueIV1"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchLeagueIV1"
+        app:layout_constraintTop_toTopOf="@+id/app_config_matchLeagueIV1" />
+
+    <TextView
+        android:id="@+id/app_config_matchStartTime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="startTime"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="8sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchVisitorTeamIV1" />
+
+    <TextView
+        android:id="@+id/app_config_matchScore1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="- : -"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/app_config_matchVisitorTeamIV1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/app_config_matchLocalTeamIV1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

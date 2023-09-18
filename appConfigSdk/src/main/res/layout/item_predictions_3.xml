@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_config_predictionsViewHolder3"
+    android:layout_width="300dp"
+    android:layout_height="200sp"
+    android:layout_margin="5dp"
+    android:background="@color/mainColor">
+
+
+    <ImageView
+        android:id="@+id/app_config_predictionsLocalTeamIV3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <ImageView
+        android:id="@+id/app_config_predictionsVisitorTeamIV3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <TextView
+        android:id="@+id/app_config_predictionsLocalTeamTV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="home"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/app_config_predictionsScoreTV3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_predictionsLocalTeamIV3" />
+
+    <TextView
+        android:id="@+id/app_config_predictionsVisitorTeamTV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="visitor"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/app_config_predictionsScoreTV3"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_predictionsVisitorTeamIV3" />
+
+    <ImageView
+        android:id="@+id/app_config_predictionsScoreTV3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/vs_red_yellow"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/app_config_predictionsLeagueTV3"
+        app:layout_constraintStart_toStartOf="@+id/app_config_predictionsLeagueTV3"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_predictionsLeagueTV3" />
+
+    <ImageView
+        android:id="@+id/app_config_predictionsLeagueIV3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <TextView
+        android:id="@+id/app_config_predictionsLeagueTV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="league"
+        android:textAlignment="textStart"
+        android:textColor="@color/textColor"
+        android:textSize="10sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/app_config_predictionsLeagueIV3"
+        app:layout_constraintStart_toStartOf="@+id/app_config_predictionsLeagueIV3"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_predictionsLeagueIV3" />
+
+    <TextView
+        android:id="@+id/app_config_predictionsTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Prediction:"
+        android:textAlignment="textStart"
+        android:textColor="@color/textColor"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_predictionsScoreTV3" />
+
+    <TextView
+        android:id="@+id/app_config_predictTV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_predictionsTextView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

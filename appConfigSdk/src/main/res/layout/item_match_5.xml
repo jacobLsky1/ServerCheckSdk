@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_config_matchViewHolder5"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/light_blue_box">
+
+
+    <ImageView
+        android:id="@+id/app_config_matchLocalTeamIV5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <ImageView
+        android:id="@+id/app_config_matchVisitorTeamIV5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <TextView
+        android:id="@+id/app_config_matchLocalTeamTV5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:gravity="end"
+        android:text="VisitorTeam"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_VS2" />
+
+    <TextView
+        android:id="@+id/app_config_matchVisitorTeamTV5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:gravity="start"
+        android:text="LocalTeam"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/app_config_VS2"
+        app:layout_constraintStart_toStartOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/app_config_matchScore5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-  :  -"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/app_config_matchStartTime5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchLocalTeamTV5" />
+
+    <TextView
+        android:id="@+id/app_config_matchStartTime5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start time"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchScore5" />
+
+    <ImageView
+        android:id="@+id/app_config_matchLeagueIV5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <TextView
+        android:id="@+id/app_config_matchLeagueTV5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="leagueName"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/app_config_matchLeagueIV5"
+        app:layout_constraintStart_toStartOf="@+id/app_config_matchLeagueIV5"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchLeagueIV5" />
+
+
+    <ImageView
+        android:id="@+id/app_config_VS2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/vs_red_black"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/app_config_matchVisitorTeamIV5"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchLocalTeamIV5"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchLeagueTV5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

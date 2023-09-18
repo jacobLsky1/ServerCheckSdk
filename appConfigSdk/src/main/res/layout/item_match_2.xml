@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_config_matchViewHolder2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/light_blue_box"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/app_config_matchVisitorTeamIV2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_sports_soccer_24" />
+
+    <ImageView
+        android:id="@+id/app_config_matchLocalTeamIV2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchLeagueIV2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_sports_soccer_24" />
+
+    <TextView
+        android:id="@+id/app_config_matchVisitorTeamTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="visitor"
+        android:maxWidth="120dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/app_config_matchVisitorTeamIV2"
+        app:layout_constraintStart_toStartOf="@+id/app_config_matchVisitorTeamIV2"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchVisitorTeamIV2" />
+
+    <TextView
+        android:id="@+id/app_config_matchLocalTeamTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="home"
+        android:maxWidth="120dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/app_config_matchLocalTeamIV2"
+        app:layout_constraintStart_toStartOf="@+id/app_config_matchLocalTeamIV2"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchLocalTeamIV2" />
+
+    <TextView
+        android:id="@+id/app_config_matchScore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Score"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/app_config_matchVisitorTeamIV2"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchLocalTeamIV2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/app_config_matchStartTime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Date"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/app_config_matchVisitorTeamIV2"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchLocalTeamIV2"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchScore2" />
+
+    <ImageView
+        android:id="@+id/app_config_matchLeagueIV2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_leagues_24" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_config_matchViewHolder3"
+    android:layout_width="match_parent"
+    android:layout_height="150sp"
+    android:layout_margin="10dp"
+    android:background="@drawable/light_blue_box">
+
+
+    <ImageView
+        android:id="@+id/app_config_matchLocalTeamIV3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <ImageView
+        android:id="@+id/app_config_matchVisitorTeamIV3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <TextView
+        android:id="@+id/app_config_matchLocalTeamTV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textColor="@color/textColor"
+        android:textAlignment="textStart"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/app_config_matchLocalTeamIV3"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchLocalTeamIV3"
+        app:layout_constraintTop_toTopOf="@+id/app_config_matchLocalTeamIV3" />
+
+    <TextView
+        android:id="@+id/app_config_matchVisitorTeamTV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/app_config_matchVisitorTeamIV3"
+        app:layout_constraintEnd_toStartOf="@+id/app_config_matchVisitorTeamIV3"
+        app:layout_constraintTop_toTopOf="@+id/app_config_matchVisitorTeamIV3" />
+
+    <TextView
+        android:id="@+id/app_config_matchScore3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/app_config_matchVisitorTeamIV3"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchLocalTeamIV3"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchVisitorTeamIV3" />
+
+    <TextView
+        android:id="@+id/app_config_matchStartTime3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/app_config_matchScore3"
+        app:layout_constraintStart_toStartOf="@+id/app_config_matchScore3"
+        app:layout_constraintTop_toBottomOf="@+id/app_config_matchScore3" />
+
+    <ImageView
+        android:id="@+id/app_config_matchLeagueIV3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/football" />
+
+    <TextView
+        android:id="@+id/app_config_matchLeagueTV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/app_config_matchLeagueIV3"
+        app:layout_constraintStart_toEndOf="@+id/app_config_matchLeagueIV3"
+        app:layout_constraintTop_toTopOf="@+id/app_config_matchLeagueIV3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
