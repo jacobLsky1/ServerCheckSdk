@@ -14,9 +14,11 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 public class BaseWebViewFragment extends Fragment {
 
+    private AppConfigViewModel viewModel;
     private WebView webView;
     private String url;
 
@@ -27,7 +29,7 @@ public class BaseWebViewFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
+        viewModel = new ViewModelProvider(requireActivity()).get(AppConfigViewModel.class);
         return inflater.inflate(R.layout.fragment_base_web_view, container, false);
     }
 
@@ -52,6 +54,7 @@ public class BaseWebViewFragment extends Fragment {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 // Show progress bar here
+                viewModel.setWebView(webView);
                 progressBar.setVisibility(View.VISIBLE);
                 super.onPageStarted(view, url, favicon);
             }
@@ -66,6 +69,7 @@ public class BaseWebViewFragment extends Fragment {
 
         webView.loadUrl(url);
     }
+
 
     public static BaseWebViewFragment newInstance(String url) {
         BaseWebViewFragment fragment = new BaseWebViewFragment();

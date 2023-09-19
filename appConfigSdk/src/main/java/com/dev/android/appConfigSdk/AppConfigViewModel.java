@@ -1,6 +1,7 @@
 package com.dev.android.appConfigSdk;
 
 import android.util.Log;
+import android.webkit.WebView;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -126,6 +127,16 @@ public class AppConfigViewModel extends ViewModel {
     public void setQuerySearch(String query){
         _querySearch.setValue(query);
     }
+
+    private MutableLiveData<WebView> _webView = new MutableLiveData<>();
+    public LiveData<WebView> getWebView(){
+        return _webView;
+    }
+    public void setWebView(WebView webView){
+        _webView.setValue(webView);
+    }
+
+
     public void basketBall(String date){
         List<CustomMatch> list = new ArrayList<>();
         _isFetchingData.setValue(true);

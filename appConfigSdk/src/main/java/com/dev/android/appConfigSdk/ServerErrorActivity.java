@@ -71,27 +71,31 @@ public class ServerErrorActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(Util.companion.hasExitDialog){
-            new AlertDialog.Builder(this)
-                    .setIcon(android.R.drawable.ic_dialog_alert) // Use built-in Android icon for alert dialog
-                    .setTitle("Exit Application")
-                    .setMessage(Util.companion.exitDialogMessage)
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finishAffinity();  // This will close the app completely, including other activities in the task
-                        }
-                    })
-                    .setNegativeButton("No", null)  // No action on clicking NO button, just close the dialog
-                    .setNeutralButton("RATE", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            openAppInPlaystore(getApplicationContext());
-                        }
-                    })
-                    .show();
-        }else{
-            super.onBackPressed();
+        if(webView.canGoBack()){
+            webView.goBack();
+        }else {
+            if (Util.companion.hasExitDialog) {
+                new AlertDialog.Builder(this)
+                        .setIcon(android.R.drawable.ic_dialog_alert) // Use built-in Android icon for alert dialog
+                        .setTitle("Exit Application")
+                        .setMessage(Util.companion.exitDialogMessage)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finishAffinity();  // This will close the app completely, including other activities in the task
+                            }
+                        })
+                        .setNegativeButton("No", null)  // No action on clicking NO button, just close the dialog
+                        .setNeutralButton("RATE", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                openAppInPlaystore(getApplicationContext());
+                            }
+                        })
+                        .show();
+            } else {
+                super.onBackPressed();
+            }
         }
     }
     public void openAppInPlaystore(Context context) {
