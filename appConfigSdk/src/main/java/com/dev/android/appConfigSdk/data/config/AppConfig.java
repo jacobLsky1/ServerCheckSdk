@@ -19,6 +19,7 @@ public class AppConfig implements Serializable {
     private String soccer_key;
     private String sports_key;
     private String predictions_key;
+    private String backupSite;
 
     private String type;
 
@@ -189,6 +190,14 @@ public class AppConfig implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getBackupSite() {
+        return this.backupSite;
+    }
+
+    public void setBackupSite(String backupSite) {
+        this.backupSite = backupSite;
     }
 
     public Web_view getWebView() {

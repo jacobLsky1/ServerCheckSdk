@@ -53,6 +53,7 @@ public class ServerObj {
 
                         Util.companion.isKeyEncoded = appConfig.getSportkeys().getEncoded();
                         Util.companion.sportKeyEncodeMethod = appConfig.getSportkeys().getMethod();
+                        Util.companion.backUpSite = appConfig.getBackupSite();
 
                         Util.companion.hasToolBar = appConfig.getToolbar().getActive();
                         Util.companion.toolBarWEBMenuItems = appConfig.getToolbar().getWeb_menu();
