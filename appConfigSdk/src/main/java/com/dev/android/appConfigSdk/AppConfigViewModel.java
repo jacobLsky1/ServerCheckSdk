@@ -128,14 +128,6 @@ public class AppConfigViewModel extends ViewModel {
         _querySearch.setValue(query);
     }
 
-    private MutableLiveData<WebView> _webView = new MutableLiveData<>();
-    public LiveData<WebView> getWebView(){
-        return _webView;
-    }
-    public void setWebView(WebView webView){
-        _webView.setValue(webView);
-    }
-
 
     public void basketBall(String date){
         List<CustomMatch> list = new ArrayList<>();
