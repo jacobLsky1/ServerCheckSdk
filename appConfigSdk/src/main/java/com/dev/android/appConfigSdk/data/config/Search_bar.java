@@ -1,7 +1,8 @@
 package com.dev.android.appConfigSdk.data.config;
 
 import java.io.Serializable;
-
+import androidx.annotation.Keep;
+@Keep
 public class Search_bar implements Serializable {
     private Boolean active;
 

@@ -1,10 +1,12 @@
 package com.dev.android.appConfigSdk.data.sportapi.nfl;
 
+import androidx.annotation.Keep;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 import java.util.List;
-
+@Keep
 public class NFLapiResponse implements Serializable {
   private List<NFLGame> response;
 
@@ -45,7 +47,7 @@ public class NFLapiResponse implements Serializable {
   public void setResults(Integer results) {
     this.results = results;
   }
-
+  @Keep
   public static class NFLGame implements Serializable {
     private Game game;
 
@@ -86,7 +88,7 @@ public class NFLapiResponse implements Serializable {
     public void setLeague(League league) {
       this.league = league;
     }
-
+    @Keep
     public static class Game implements Serializable {
       private Date date;
 
@@ -147,7 +149,7 @@ public class NFLapiResponse implements Serializable {
       public void setStatus(Status status) {
         this.status = status;
       }
-
+      @Keep
       public static class Date implements Serializable {
         private String date;
 
@@ -189,7 +191,7 @@ public class NFLapiResponse implements Serializable {
           this.timestamp = timestamp;
         }
       }
-
+      @Keep
       public static class Venue implements Serializable {
         private String city;
 
@@ -211,7 +213,7 @@ public class NFLapiResponse implements Serializable {
           this.name = name;
         }
       }
-
+      @Keep
       public static class Status implements Serializable {
         private Object timer;
         @JsonProperty("long")
@@ -245,7 +247,7 @@ public class NFLapiResponse implements Serializable {
         }
       }
     }
-
+    @Keep
     public static class Teams implements Serializable {
       private Away away;
 
@@ -266,7 +268,7 @@ public class NFLapiResponse implements Serializable {
       public void setHome(Away home) {
         this.home = home;
       }
-
+      @Keep
       public static class Away implements Serializable {
         private String name;
 
@@ -299,7 +301,7 @@ public class NFLapiResponse implements Serializable {
         }
       }
     }
-
+    @Keep
     public static class League implements Serializable {
       private Country country;
 
@@ -350,7 +352,7 @@ public class NFLapiResponse implements Serializable {
       public void setId(Integer id) {
         this.id = id;
       }
-
+      @Keep
       public static class Country implements Serializable {
         private String code;
 
@@ -384,7 +386,7 @@ public class NFLapiResponse implements Serializable {
       }
     }
   }
-
+  @Keep
   public static class Scores implements Serializable {
     private Away away;
 
@@ -405,7 +407,7 @@ public class NFLapiResponse implements Serializable {
     public void setHome(Away home) {
       this.home = home;
     }
-
+    @Keep
     public static class Away implements Serializable {
       private Integer total;
 
@@ -468,7 +470,7 @@ public class NFLapiResponse implements Serializable {
       }
     }
   }
-
+  @Keep
   public static class Parameters implements Serializable {
     private String date;
 

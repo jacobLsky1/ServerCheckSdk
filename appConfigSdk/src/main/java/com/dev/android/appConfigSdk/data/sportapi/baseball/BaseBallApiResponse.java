@@ -4,7 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 import java.util.List;
-
+import androidx.annotation.Keep;
+@Keep
 public class BaseBallApiResponse implements Serializable {
   private List<BaseBallGame> response;
 
@@ -46,6 +47,7 @@ public class BaseBallApiResponse implements Serializable {
     this.results = results;
   }
 
+  @Keep
   public static class BaseBallGame implements Serializable {
     private String date;
 
@@ -157,6 +159,7 @@ public class BaseBallApiResponse implements Serializable {
       this.status = status;
     }
 
+    @Keep
     public static class Country implements Serializable {
       private String code;
 
@@ -199,6 +202,7 @@ public class BaseBallApiResponse implements Serializable {
       }
     }
 
+    @Keep
     public static class Teams implements Serializable {
       private Away away;
 
@@ -220,6 +224,7 @@ public class BaseBallApiResponse implements Serializable {
         this.home = home;
       }
 
+      @Keep
       public static class Away implements Serializable {
         private String name;
 
@@ -253,6 +258,7 @@ public class BaseBallApiResponse implements Serializable {
       }
     }
 
+    @Keep
     public static class League implements Serializable {
       private String name;
 
@@ -305,6 +311,7 @@ public class BaseBallApiResponse implements Serializable {
       }
     }
 
+    @Keep
     public static class Status implements Serializable {
       @JsonProperty("long")
       private String longValue;
@@ -330,6 +337,7 @@ public class BaseBallApiResponse implements Serializable {
     }
   }
 
+  @Keep
   public static class Parameters implements Serializable {
     private String date;
 
@@ -342,6 +350,7 @@ public class BaseBallApiResponse implements Serializable {
     }
   }
 
+  @Keep
   public static class Scores implements Serializable {
     private Away away;
 
@@ -363,6 +372,7 @@ public class BaseBallApiResponse implements Serializable {
       this.home = home;
     }
 
+    @Keep
     public static class Away implements Serializable {
       private Integer hits;
 
@@ -404,6 +414,7 @@ public class BaseBallApiResponse implements Serializable {
         this.errors = errors;
       }
 
+      @Keep
       public static class Innings implements Serializable {
         @JsonProperty("9")
         private Integer i9;

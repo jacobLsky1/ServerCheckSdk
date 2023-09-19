@@ -1,7 +1,8 @@
 package com.dev.android.appConfigSdk.data.config;
 
 import java.io.Serializable;
-
+import androidx.annotation.Keep;
+@Keep
 public class Main_ads implements Serializable {
     private Unity unity;
 

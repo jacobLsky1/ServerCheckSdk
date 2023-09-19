@@ -1,7 +1,8 @@
 package com.dev.android.appConfigSdk.data.config;
 
 import java.io.Serializable;
-
+import androidx.annotation.Keep;
+@Keep
 public class Startapp implements Serializable {
     private String startapp_app_id;
 

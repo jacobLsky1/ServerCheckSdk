@@ -1,7 +1,10 @@
 package com.dev.android.appConfigSdk.data.config;
 
-import java.io.Serializable;
 
+
+import java.io.Serializable;
+import androidx.annotation.Keep;
+@Keep
 public class AppConfigResponse implements Serializable {
   private AppConfig appConfig;
 

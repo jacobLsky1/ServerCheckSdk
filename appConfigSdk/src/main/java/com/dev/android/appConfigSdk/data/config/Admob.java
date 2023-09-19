@@ -1,7 +1,10 @@
 package com.dev.android.appConfigSdk.data.config;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class Admob implements Serializable {
     private String admob_app_open_ad_unit_id;
 

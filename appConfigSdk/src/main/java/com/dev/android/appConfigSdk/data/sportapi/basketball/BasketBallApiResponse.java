@@ -1,10 +1,13 @@
 package com.dev.android.appConfigSdk.data.sportapi.basketball;
 
+import androidx.annotation.Keep;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 import java.util.List;
 
+@Keep
 public class BasketBallApiResponse implements Serializable {
   private List<BasketBallGame> response;
 
@@ -46,6 +49,7 @@ public class BasketBallApiResponse implements Serializable {
     this.results = results;
   }
 
+  @Keep
   public static class BasketBallGame implements Serializable {
     private String date;
 
@@ -167,6 +171,7 @@ public class BasketBallApiResponse implements Serializable {
       this.status = status;
     }
 
+    @Keep
     public static class Country implements Serializable {
       private String code;
 
@@ -209,6 +214,7 @@ public class BasketBallApiResponse implements Serializable {
       }
     }
 
+    @Keep
     public static class Teams implements Serializable {
       private Away away;
 
@@ -230,6 +236,7 @@ public class BasketBallApiResponse implements Serializable {
         this.home = home;
       }
 
+      @Keep
       public static class Away implements Serializable {
         private String name;
 
@@ -263,6 +270,7 @@ public class BasketBallApiResponse implements Serializable {
       }
     }
 
+    @Keep
     public static class League implements Serializable {
       private String name;
 
@@ -315,6 +323,7 @@ public class BasketBallApiResponse implements Serializable {
       }
     }
 
+    @Keep
     public static class Status implements Serializable {
       private Object timer;
 
@@ -350,6 +359,7 @@ public class BasketBallApiResponse implements Serializable {
     }
   }
 
+  @Keep
   public static class Parameters implements Serializable {
     private String date;
 
@@ -362,6 +372,7 @@ public class BasketBallApiResponse implements Serializable {
     }
   }
 
+  @Keep
   public static class Scores implements Serializable {
     private Away away;
 
@@ -383,6 +394,7 @@ public class BasketBallApiResponse implements Serializable {
       this.home = home;
     }
 
+    @Keep
     public static class Away implements Serializable {
       private Integer total;
 

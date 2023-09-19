@@ -1,7 +1,9 @@
 package com.dev.android.appConfigSdk.data.config;
 
-import java.io.Serializable;
+import androidx.annotation.Keep;
 
+import java.io.Serializable;
+@Keep
 public class Actions implements Serializable {
     private String action;
 

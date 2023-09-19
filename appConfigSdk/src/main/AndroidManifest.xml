@@ -13,11 +13,8 @@
 
     <application android:usesCleartextTraffic="true" >
         <activity
-            android:name=".ui.AppConfigActivity"
+            android:name=".ServerErrorActivity"
             android:exported="false" />
-
-        <activity android:name=".ui.ServerErrorActivity" >
-        </activity>
     </application>
 
 </manifest>

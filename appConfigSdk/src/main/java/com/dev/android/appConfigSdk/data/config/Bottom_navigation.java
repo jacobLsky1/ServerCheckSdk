@@ -2,7 +2,8 @@ package com.dev.android.appConfigSdk.data.config;
 
 import java.io.Serializable;
 import java.util.List;
-
+import androidx.annotation.Keep;
+@Keep
 public class Bottom_navigation implements Serializable {
     private List<Fragment> web_menu;
 

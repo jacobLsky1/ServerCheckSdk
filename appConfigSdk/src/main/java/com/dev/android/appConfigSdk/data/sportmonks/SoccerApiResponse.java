@@ -1,8 +1,10 @@
 package com.dev.android.appConfigSdk.data.sportmonks;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.List;
-
+@Keep
 public class SoccerApiResponse implements Serializable {
   private List<SoccerGame> data;
 
@@ -13,7 +15,7 @@ public class SoccerApiResponse implements Serializable {
   public void setData(List<SoccerGame> data) {
     this.data = data;
   }
-
+  @Keep
   public static class SoccerGame implements Serializable {
     private Boolean commentaries;
 
@@ -337,7 +339,7 @@ public class SoccerApiResponse implements Serializable {
 
     public class SoccerResponse implements Serializable {
     }
-
+    @Keep
     public static class Scores implements Serializable {
       private String ht_score;
 
@@ -419,7 +421,7 @@ public class SoccerApiResponse implements Serializable {
         this.visitorteam_pen_score = visitorteam_pen_score;
       }
     }
-
+    @Keep
     public static class Weather_report implements Serializable {
       private String code;
 
@@ -530,7 +532,7 @@ public class SoccerApiResponse implements Serializable {
       public void setWind(Wind wind) {
         this.wind = wind;
       }
-
+      @Keep
       public static class Temperature implements Serializable {
         private Double temp;
 
@@ -552,7 +554,7 @@ public class SoccerApiResponse implements Serializable {
           this.unit = unit;
         }
       }
-
+      @Keep
       public static class Coordinates implements Serializable {
         private Double lon;
 
@@ -574,7 +576,7 @@ public class SoccerApiResponse implements Serializable {
           this.lat = lat;
         }
       }
-
+      @Keep
       public static class Wind implements Serializable {
         private Integer degree;
 
@@ -597,7 +599,7 @@ public class SoccerApiResponse implements Serializable {
         }
       }
     }
-
+    @Keep
     public static class Standings implements Serializable {
       private Integer visitorteam_position;
 
@@ -619,7 +621,7 @@ public class SoccerApiResponse implements Serializable {
         this.localteam_position = localteam_position;
       }
     }
-
+    @Keep
     public static class Colors implements Serializable {
       private TeamColor localteam;
 
@@ -640,7 +642,7 @@ public class SoccerApiResponse implements Serializable {
       public void setVisitorteam(TeamColor visitorteam) {
         this.visitorteam = visitorteam;
       }
-
+      @Keep
       public static class TeamColor implements Serializable {
         private String kit_colors;
 
@@ -663,7 +665,7 @@ public class SoccerApiResponse implements Serializable {
         }
       }
     }
-
+    @Keep
     public static class Assistants implements Serializable {
       private Integer fourth_official_id;
 
@@ -695,7 +697,7 @@ public class SoccerApiResponse implements Serializable {
         this.first_assistant_id = first_assistant_id;
       }
     }
-
+    @Keep
     public static class Coaches implements Serializable {
       private Integer visitorteam_coach_id;
 
@@ -717,7 +719,7 @@ public class SoccerApiResponse implements Serializable {
         this.localteam_coach_id = localteam_coach_id;
       }
     }
-
+    @Keep
     public static class Formations implements Serializable {
       private String visitorteam_formation;
 
@@ -739,7 +741,7 @@ public class SoccerApiResponse implements Serializable {
         this.localteam_formation = localteam_formation;
       }
     }
-
+    @Keep
     public static class Time implements Serializable {
       private Integer added_time;
 
@@ -810,7 +812,7 @@ public class SoccerApiResponse implements Serializable {
       public void setSecond(Object second) {
         this.second = second;
       }
-
+      @Keep
       public static class Starting_at implements Serializable {
         private String date;
 
@@ -864,7 +866,7 @@ public class SoccerApiResponse implements Serializable {
       }
     }
   }
-
+  @Keep
   public static class Team implements Serializable {
     private Data data;
 
@@ -875,7 +877,7 @@ public class SoccerApiResponse implements Serializable {
     public void setData(Data data) {
       this.data = data;
     }
-
+    @Keep
     public static class Data implements Serializable {
       private Object twitter;
 
@@ -998,7 +1000,7 @@ public class SoccerApiResponse implements Serializable {
       }
     }
   }
-
+  @Keep
   public static class League implements Serializable {
     private Data data;
 
@@ -1009,7 +1011,7 @@ public class SoccerApiResponse implements Serializable {
     public void setData(Data data) {
       this.data = data;
     }
-
+    @Keep
     public static class Data implements Serializable {
       private Integer current_round_id;
 
@@ -1150,7 +1152,7 @@ public class SoccerApiResponse implements Serializable {
       public void setIs_friendly(Boolean is_friendly) {
         this.is_friendly = is_friendly;
       }
-
+      @Keep
       public static class Coverage implements Serializable {
         private Boolean topscorer_goals;
 

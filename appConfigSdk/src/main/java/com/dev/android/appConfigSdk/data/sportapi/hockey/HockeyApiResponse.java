@@ -1,10 +1,12 @@
 package com.dev.android.appConfigSdk.data.sportapi.hockey;
 
+import androidx.annotation.Keep;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 import java.util.List;
-
+@Keep
 public class HockeyApiResponse implements Serializable {
   private List<HockeyGame> response;
 
@@ -46,6 +48,7 @@ public class HockeyApiResponse implements Serializable {
     this.results = results;
   }
 
+  @Keep
   public static class HockeyGame implements Serializable {
     private String date;
 
@@ -187,6 +190,7 @@ public class HockeyApiResponse implements Serializable {
       this.status = status;
     }
 
+    @Keep
     public static class Country implements Serializable {
       private String code;
 
@@ -229,6 +233,7 @@ public class HockeyApiResponse implements Serializable {
       }
     }
 
+    @Keep
     public static class Teams implements Serializable {
       private Away away;
 
@@ -250,6 +255,7 @@ public class HockeyApiResponse implements Serializable {
         this.home = home;
       }
 
+      @Keep
       public static class Away implements Serializable {
         private String name;
 
@@ -282,7 +288,7 @@ public class HockeyApiResponse implements Serializable {
         }
       }
     }
-
+    @Keep
     public static class League implements Serializable {
       private String name;
 
@@ -334,7 +340,7 @@ public class HockeyApiResponse implements Serializable {
         this.type = type;
       }
     }
-
+    @Keep
     public static class Periods implements Serializable {
       private String third;
 
@@ -386,7 +392,7 @@ public class HockeyApiResponse implements Serializable {
         this.second = second;
       }
     }
-
+    @Keep
     public static class Scores implements Serializable {
       private Integer away;
 
@@ -408,7 +414,7 @@ public class HockeyApiResponse implements Serializable {
         this.home = home;
       }
     }
-
+    @Keep
     public static class Status implements Serializable {
       @JsonProperty("long")
       private String longValue;
@@ -433,7 +439,7 @@ public class HockeyApiResponse implements Serializable {
       }
     }
   }
-
+  @Keep
   public static class Parameters implements Serializable {
     private String date;
 

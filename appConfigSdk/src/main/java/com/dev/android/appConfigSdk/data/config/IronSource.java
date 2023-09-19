@@ -1,7 +1,8 @@
 package com.dev.android.appConfigSdk.data.config;
 
 import java.io.Serializable;
-
+import androidx.annotation.Keep;
+@Keep
   public class IronSource implements Serializable {
     private String ironSource_rewarded_video_ad_unit_id;
 

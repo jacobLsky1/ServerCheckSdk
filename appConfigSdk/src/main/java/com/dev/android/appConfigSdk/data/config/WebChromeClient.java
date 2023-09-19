@@ -3,7 +3,8 @@ package com.dev.android.appConfigSdk.data.config;
 
 import java.io.Serializable;
 import java.util.List;
-
+import androidx.annotation.Keep;
+@Keep
 public class WebChromeClient implements Serializable {
     private List<String> methods;
 

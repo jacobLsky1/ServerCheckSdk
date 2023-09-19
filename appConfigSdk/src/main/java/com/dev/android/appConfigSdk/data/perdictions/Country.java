@@ -3,7 +3,7 @@ package com.dev.android.appConfigSdk.data.perdictions;
 import androidx.annotation.Keep;
 
 import java.util.List;
-
+import androidx.annotation.Keep;
 @Keep
 public class Country {
     private List<PredictionsResponse.Match> matches;

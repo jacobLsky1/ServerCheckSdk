@@ -1,8 +1,11 @@
 package com.dev.android.appConfigSdk.data.config;
 
+import androidx.annotation.Keep;
+
 import java.io.Serializable;
 import java.util.List;
 
+@Keep
 public class AppConfig implements Serializable {
     private Bottom_navigation bottom_navigation;
 

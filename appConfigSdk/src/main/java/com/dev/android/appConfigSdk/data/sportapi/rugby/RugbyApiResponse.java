@@ -1,10 +1,12 @@
 package com.dev.android.appConfigSdk.data.sportapi.rugby;
 
+import androidx.annotation.Keep;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 import java.util.List;
-
+@Keep
 public class RugbyApiResponse implements Serializable {
   private List<RugbyGame> response;
 
@@ -45,7 +47,7 @@ public class RugbyApiResponse implements Serializable {
   public void setResults(Integer results) {
     this.results = results;
   }
-
+  @Keep
   public static class RugbyGame implements Serializable {
     private String date;
 
@@ -166,7 +168,7 @@ public class RugbyApiResponse implements Serializable {
     public void setStatus(Status status) {
       this.status = status;
     }
-
+    @Keep
     public static class Country implements Serializable {
       private String code;
 
@@ -208,7 +210,7 @@ public class RugbyApiResponse implements Serializable {
         this.id = id;
       }
     }
-
+    @Keep
     public static class Teams implements Serializable {
       private Away away;
 
@@ -229,7 +231,7 @@ public class RugbyApiResponse implements Serializable {
       public void setHome(Away home) {
         this.home = home;
       }
-
+      @Keep
       public static class Away implements Serializable {
         private String name;
 
@@ -262,7 +264,7 @@ public class RugbyApiResponse implements Serializable {
         }
       }
     }
-
+    @Keep
     public static class League implements Serializable {
       private String name;
 
@@ -314,7 +316,7 @@ public class RugbyApiResponse implements Serializable {
         this.type = type;
       }
     }
-
+    @Keep
     public static class Periods implements Serializable {
       private Teams overtime;
 
@@ -356,7 +358,7 @@ public class RugbyApiResponse implements Serializable {
         this.second = second;
       }
     }
-
+    @Keep
     public static class Status implements Serializable {
       @JsonProperty("long")
       private String longValue;
@@ -381,7 +383,7 @@ public class RugbyApiResponse implements Serializable {
       }
     }
   }
-
+  @Keep
   public static class Scores implements Serializable {
     private Integer away;
 
@@ -403,7 +405,7 @@ public class RugbyApiResponse implements Serializable {
       this.home = home;
     }
   }
-
+  @Keep
   public static class Parameters implements Serializable {
     private String date;
 

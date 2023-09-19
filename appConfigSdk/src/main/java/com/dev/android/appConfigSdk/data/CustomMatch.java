@@ -1,5 +1,8 @@
 package com.dev.android.appConfigSdk.data;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class CustomMatch {
 
     private int id;

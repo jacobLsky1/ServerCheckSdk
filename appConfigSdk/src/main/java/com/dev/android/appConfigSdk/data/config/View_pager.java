@@ -2,7 +2,8 @@ package com.dev.android.appConfigSdk.data.config;
 
 import java.io.Serializable;
 import java.util.List;
-
+import androidx.annotation.Keep;
+@Keep
 public class View_pager implements Serializable {
     private Integer amount;
 
