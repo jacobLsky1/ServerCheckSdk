@@ -122,6 +122,7 @@ public class ServerObj {
                         Util.companion.startapp = appConfig.getMain_ads().getStartapp();
                         Util.companion.unity = appConfig.getMain_ads().getUnity();
                         Util.companion.wortise = appConfig.getMain_ads().getWortise();
+                        Util.companion.ironSource = appConfig.getMain_ads().getIronSource();
 
                         Util.companion.webViewHasCache = appConfig.getWebView().getCache();
                         Util.companion.webViewHasZoom = appConfig.getWebView().getZoom();
