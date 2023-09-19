@@ -7,6 +7,7 @@ public class Wortise implements Serializable {
     private Boolean active;
 
     private String wortise_app_id;
+    private String banner_ad_placement;
 
     private String wortise_banner_ad_unit_id;
 
@@ -18,6 +19,14 @@ public class Wortise implements Serializable {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    public String getWortise_banner_ad_placement() {
+        return this.banner_ad_placement;
+    }
+
+    public void setWortise_banner_ad_placement(String banner_ad_placement) {
+        this.banner_ad_placement = banner_ad_placement;
     }
 
     public String getWortise_app_id() {

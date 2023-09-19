@@ -9,6 +9,7 @@ import androidx.annotation.Keep;
     private String ironSource_interstitial_ad_unit_id;
 
     private Boolean active;
+  private String banner_ad_placement;
 
     private String ironSource_banner_ad_unit_id;
 
@@ -23,6 +24,14 @@ import androidx.annotation.Keep;
     public void setIronSource_rewarded_video_ad_unit_id(String ironSource_rewarded_video_ad_unit_id) {
       this.ironSource_rewarded_video_ad_unit_id = ironSource_rewarded_video_ad_unit_id;
     }
+
+  public String getIronSource_banner_ad_placement() {
+    return this.banner_ad_placement;
+  }
+
+  public void setIronSource_banner_ad_placement(String banner_ad_placement) {
+    this.banner_ad_placement = banner_ad_placement;
+  }
 
     public String getIronSource_interstitial_ad_unit_id() {
       return this.ironSource_interstitial_ad_unit_id;

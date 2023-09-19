@@ -6,11 +6,21 @@ import androidx.annotation.Keep;
 public class Unity implements Serializable {
     private String unity_game_id;
 
+    private String banner_ad_placement;
     private Boolean active;
 
     private String unity_interstitial_placement_id;
 
     private String unity_banner_placement_id;
+
+
+    public String getUnity_banner_ad_placement() {
+        return this.banner_ad_placement;
+    }
+
+    public void setUnity_banner_ad_placement(String banner_ad_placement) {
+        this.banner_ad_placement = banner_ad_placement;
+    }
 
     public String getUnity_game_id() {
         return this.unity_game_id;

@@ -7,6 +7,7 @@ import java.io.Serializable;
 @Keep
 public class Admob implements Serializable {
     private String admob_app_open_ad_unit_id;
+    private String banner_ad_placement;
 
     private String admob_publisher_id;
 
@@ -17,6 +18,14 @@ public class Admob implements Serializable {
     private String admob_interstitial_unit_id;
 
     private String admob_native_unit_id;
+
+    public String getAdmob_banner_ad_placement() {
+        return this.banner_ad_placement;
+    }
+
+    public void setAdmob_banner_ad_placement(String banner_ad_placement) {
+        this.banner_ad_placement = banner_ad_placement;
+    }
 
     public String getAdmob_app_open_ad_unit_id() {
         return this.admob_app_open_ad_unit_id;
