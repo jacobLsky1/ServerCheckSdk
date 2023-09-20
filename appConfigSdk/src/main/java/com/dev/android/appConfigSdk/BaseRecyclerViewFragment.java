@@ -195,7 +195,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                     noMatchesTV.setText("No Soccer Matches for: "+ viewModelDate);
                 } else {
                     noMatchesTV.setVisibility(View.GONE);
-                    adapter = new GameItemsAdapter(newMatches,style);
+                    adapter = new GameItemsAdapter(newMatches,style,requireContext());
                     recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                     recyclerView.setAdapter(adapter);
                 }
@@ -209,7 +209,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                     noMatchesTV.setText("No Soccer Predictions for: "+ viewModelDate);
                 } else {
                     noMatchesTV.setVisibility(View.GONE);
-                    adapter = new GameItemsAdapter(newMatches,style);
+                    adapter = new GameItemsAdapter(newMatches,style,requireContext());
                     recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                     recyclerView.setAdapter(adapter);
                 }
@@ -223,7 +223,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                     noMatchesTV.setText("No Basketball Matches for: "+ viewModelDate);
                 } else {
                     noMatchesTV.setVisibility(View.GONE);
-                    adapter = new GameItemsAdapter(newMatches,style);
+                    adapter = new GameItemsAdapter(newMatches,style,requireContext());
                     recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                     recyclerView.setAdapter(adapter);
                 }
@@ -237,7 +237,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                     noMatchesTV.setText("No Baseball Matches for: "+ viewModelDate);
                 } else {
                     noMatchesTV.setVisibility(View.GONE);
-                    adapter = new GameItemsAdapter(newMatches,style);
+                    adapter = new GameItemsAdapter(newMatches,style,requireContext());
                     recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                     recyclerView.setAdapter(adapter);
                 }
@@ -251,7 +251,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                     noMatchesTV.setText("No Hockey Matches for: "+ viewModelDate);
                 } else {
                     noMatchesTV.setVisibility(View.GONE);
-                    adapter = new GameItemsAdapter(newMatches,style);
+                    adapter = new GameItemsAdapter(newMatches,style,requireContext());
                     recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                     recyclerView.setAdapter(adapter);
                 }
@@ -265,7 +265,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                     noMatchesTV.setText("No NFL Matches for: "+ viewModelDate);
                 } else {
                     noMatchesTV.setVisibility(View.GONE);
-                    adapter = new GameItemsAdapter(newMatches,style);
+                    adapter = new GameItemsAdapter(newMatches,style,requireContext());
                     recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                     recyclerView.setAdapter(adapter);
                 }
@@ -279,7 +279,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                     noMatchesTV.setText("No Rugby Matches for: "+ viewModelDate);
                 } else {
                     noMatchesTV.setVisibility(View.GONE);
-                    adapter = new GameItemsAdapter(newMatches,style);
+                    adapter = new GameItemsAdapter(newMatches,style,requireContext());
                     recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                     recyclerView.setAdapter(adapter);
                 }
@@ -293,7 +293,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                     noMatchesTV.setText("No Volleyball Matches for: "+ viewModelDate);
                 } else {
                     noMatchesTV.setVisibility(View.GONE);
-                    adapter = new GameItemsAdapter(newMatches,style);
+                    adapter = new GameItemsAdapter(newMatches,style,requireContext());
                     recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                     recyclerView.setAdapter(adapter);
                 }
@@ -307,7 +307,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                     noMatchesTV.setText("No Handball Matches for: "+ viewModelDate);
                 } else {
                     noMatchesTV.setVisibility(View.GONE);
-                    adapter = new GameItemsAdapter(newMatches,style);
+                    adapter = new GameItemsAdapter(newMatches,style,requireContext());
                     recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                     recyclerView.setAdapter(adapter);
                 }
@@ -316,7 +316,7 @@ public class BaseRecyclerViewFragment extends Fragment {
     }
 
     private void returnToOrgnlList(List<CustomMatch> list) {
-        adapter = new GameItemsAdapter(list,style);
+        adapter = new GameItemsAdapter(list,style,requireContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerView.setAdapter(adapter);
     }
@@ -329,7 +329,7 @@ public class BaseRecyclerViewFragment extends Fragment {
                         )
                 )
         ).collect(Collectors.toList());
-        adapter = new GameItemsAdapter(matchList,style);
+        adapter = new GameItemsAdapter(matchList,style,requireContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerView.setAdapter(adapter);
     }

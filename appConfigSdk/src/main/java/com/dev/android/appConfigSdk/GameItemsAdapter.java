@@ -1,5 +1,7 @@
 package com.dev.android.appConfigSdk;
 
+import android.content.Context;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -19,10 +22,12 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     private List<CustomMatch> games;
     private int style;
+    private static Context context;
 
-    public GameItemsAdapter(List<CustomMatch> games, int style) {
+    public GameItemsAdapter(List<CustomMatch> games, int style,Context context) {
         this.games = games;
         this.style = style;
+        this.context = context;
     }
 
     @NonNull
@@ -76,11 +81,14 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     static class StyleOneViewHolder extends RecyclerView.ViewHolder {
+        ConstraintLayout constraintLayout1;
         ImageView matchLocalTeamIV, matchVisitorTeamIV, matchLeagueIV;
         TextView matchLocalTeamTV, matchVisitorTeamTV, matchLeagueTV, matchStartTime, matchScore;
 
         public StyleOneViewHolder(@NonNull View itemView) {
             super(itemView);
+            constraintLayout1 = itemView.findViewById(R.id.app_config_matchViewHolder1);
+
             matchLocalTeamIV = itemView.findViewById(R.id.app_config_matchLocalTeamIV1);
             matchVisitorTeamIV = itemView.findViewById(R.id.app_config_matchVisitorTeamIV1);
             matchLeagueIV = itemView.findViewById(R.id.app_config_matchLeagueIV1);
@@ -93,6 +101,11 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
 
         void bind(CustomMatch game) {
+            TypedValue typedValue = new TypedValue();
+            context.getTheme().resolveAttribute(androidx.appcompat.R.attr.colorPrimary, typedValue, true);
+            int color = typedValue.data;
+            constraintLayout1.setBackgroundColor(color);
+
             Glide.with(itemView.getContext()).load(game.getLocalTeamLogo()).into(matchLocalTeamIV);
             Glide.with(itemView.getContext()).load(game.getVisitorTeamLogo()).into(matchVisitorTeamIV);
             Glide.with(itemView.getContext()).load(game.getLeagueLogo()).into(matchLeagueIV);
@@ -110,11 +123,14 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     static class StyleTwoViewHolder extends RecyclerView.ViewHolder {
+        ConstraintLayout constraintLayout2;
         ImageView matchLocalTeamIV, matchVisitorTeamIV, matchLeagueIV;
         TextView matchLocalTeamTV, matchVisitorTeamTV, matchLeagueTV, matchStartTime, matchScore;
 
         public StyleTwoViewHolder(@NonNull View itemView) {
             super(itemView);
+            constraintLayout2 = itemView.findViewById(R.id.app_config_matchViewHolder2);
+
             matchLocalTeamIV = itemView.findViewById(R.id.app_config_matchLocalTeamIV2);
             matchVisitorTeamIV = itemView.findViewById(R.id.app_config_matchVisitorTeamIV2);
             matchLeagueIV = itemView.findViewById(R.id.app_config_matchLeagueIV2);
@@ -126,6 +142,11 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
 
         void bind(CustomMatch game) {
+            TypedValue typedValue = new TypedValue();
+            context.getTheme().resolveAttribute(androidx.appcompat.R.attr.colorPrimary, typedValue, true);
+            int color = typedValue.data;
+            constraintLayout2.setBackgroundColor(color);
+
             Glide.with(itemView.getContext()).load(game.getLocalTeamLogo()).into(matchLocalTeamIV);
             Glide.with(itemView.getContext()).load(game.getVisitorTeamLogo()).into(matchVisitorTeamIV);
             Glide.with(itemView.getContext()).load(game.getLeagueLogo()).into(matchLeagueIV);
@@ -143,11 +164,14 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
 
     static class StyleThreeViewHolder extends RecyclerView.ViewHolder {
+        ConstraintLayout constraintLayout3;
         ImageView matchLocalTeamIV, matchVisitorTeamIV, matchLeagueIV;
         TextView matchLocalTeamTV, matchVisitorTeamTV, matchLeagueTV, matchStartTime, matchScore;
 
         public StyleThreeViewHolder(@NonNull View itemView) {
             super(itemView);
+            constraintLayout3 = itemView.findViewById(R.id.app_config_matchViewHolder3);
+
             matchLocalTeamIV = itemView.findViewById(R.id.app_config_matchLocalTeamIV3);
             matchVisitorTeamIV = itemView.findViewById(R.id.app_config_matchVisitorTeamIV3);
             matchLeagueIV = itemView.findViewById(R.id.app_config_matchLeagueIV3);
@@ -160,6 +184,11 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
 
         void bind(CustomMatch game) {
+            TypedValue typedValue = new TypedValue();
+            context.getTheme().resolveAttribute(androidx.appcompat.R.attr.colorPrimary, typedValue, true);
+            int color = typedValue.data;
+            constraintLayout3.setBackgroundColor(color);
+
             Glide.with(itemView.getContext()).load(game.getLocalTeamLogo()).into(matchLocalTeamIV);
             Glide.with(itemView.getContext()).load(game.getVisitorTeamLogo()).into(matchVisitorTeamIV);
             Glide.with(itemView.getContext()).load(game.getLeagueLogo()).into(matchLeagueIV);
@@ -177,11 +206,14 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     static class StyleFourViewHolder extends RecyclerView.ViewHolder {
+        ConstraintLayout constraintLayout4;
         ImageView matchLocalTeamIV, matchVisitorTeamIV, matchLeagueIV;
         TextView matchLocalTeamTV, matchVisitorTeamTV, matchLeagueTV, matchStartTime, matchScore;
 
         public StyleFourViewHolder(@NonNull View itemView) {
             super(itemView);
+            constraintLayout4 = itemView.findViewById(R.id.app_config_matchViewHolder4);
+
             matchLocalTeamIV = itemView.findViewById(R.id.app_config_matchLocalTeamIV4);
             matchVisitorTeamIV = itemView.findViewById(R.id.app_config_matchVisitorTeamIV4);
             matchLeagueIV = itemView.findViewById(R.id.app_config_matchLeagueIV4);
@@ -194,6 +226,11 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
 
         void bind(CustomMatch game) {
+            TypedValue typedValue = new TypedValue();
+            context.getTheme().resolveAttribute(androidx.appcompat.R.attr.colorPrimary, typedValue, true);
+            int color = typedValue.data;
+            constraintLayout4.setBackgroundColor(color);
+
             Glide.with(itemView.getContext()).load(game.getLocalTeamLogo()).into(matchLocalTeamIV);
             Glide.with(itemView.getContext()).load(game.getVisitorTeamLogo()).into(matchVisitorTeamIV);
             Glide.with(itemView.getContext()).load(game.getLeagueLogo()).into(matchLeagueIV);
@@ -211,11 +248,14 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     static class StyleFiveViewHolder extends RecyclerView.ViewHolder {
+        ConstraintLayout constraintLayout5;
         ImageView matchLocalTeamIV, matchVisitorTeamIV, matchLeagueIV;
         TextView matchLocalTeamTV, matchVisitorTeamTV, matchLeagueTV, matchStartTime, matchScore;
 
         public StyleFiveViewHolder(@NonNull View itemView) {
             super(itemView);
+            constraintLayout5 = itemView.findViewById(R.id.app_config_matchViewHolder5);
+
             matchLocalTeamIV = itemView.findViewById(R.id.app_config_matchLocalTeamIV5);
             matchVisitorTeamIV = itemView.findViewById(R.id.app_config_matchVisitorTeamIV5);
             matchLeagueIV = itemView.findViewById(R.id.app_config_matchLeagueIV5);
@@ -229,6 +269,11 @@ public class GameItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
 
         void bind(CustomMatch game) {
+            TypedValue typedValue = new TypedValue();
+            context.getTheme().resolveAttribute(androidx.appcompat.R.attr.colorPrimary, typedValue, true);
+            int color = typedValue.data;
+            constraintLayout5.setBackgroundColor(color);
+
             Glide.with(itemView.getContext()).load(game.getLocalTeamLogo()).into(matchLocalTeamIV);
             Glide.with(itemView.getContext()).load(game.getVisitorTeamLogo()).into(matchVisitorTeamIV);
             Glide.with(itemView.getContext()).load(game.getLeagueLogo()).into(matchLeagueIV);
