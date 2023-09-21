@@ -87,7 +87,7 @@
         android:text="startTime"
         android:gravity="center"
         android:textColor="@color/textColor"
-        android:textSize="8sp"
+        android:textSize="12sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,14 +98,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
-        android:text="- : -"
         android:gravity="center"
+        android:text="- : -"
         android:textColor="@color/textColor"
-        android:textSize="8sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/app_config_matchVisitorTeamIV1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/app_config_matchLocalTeamIV1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

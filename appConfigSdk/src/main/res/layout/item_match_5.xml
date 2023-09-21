@@ -33,28 +33,25 @@
         android:id="@+id/app_config_matchLocalTeamTV5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:gravity="end"
-        android:text="VisitorTeam"
+        android:gravity="start"
+        android:text="LocalTeam"
         android:textColor="@color/textColor"
         android:textSize="14sp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_config_VS2" />
 
     <TextView
         android:id="@+id/app_config_matchVisitorTeamTV5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:gravity="start"
-        android:text="LocalTeam"
+        android:gravity="end"
+        android:text="VisitorTeam"
         android:textColor="@color/textColor"
         android:textSize="14sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/app_config_VS2"
-        app:layout_constraintStart_toStartOf="parent"
-    />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/app_config_matchScore5"
