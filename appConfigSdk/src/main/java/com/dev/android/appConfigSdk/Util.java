@@ -95,7 +95,7 @@ public class Util {
         public List<Actions> exitDialogActions = new ArrayList<>();
 
         //------------------------------ app colors ------------------------------
-        public Integer theme = 1;
+        public Integer theme = 0;
 
         //------------------------------ ads status ------------------------------
         public Boolean hasAds = false;
