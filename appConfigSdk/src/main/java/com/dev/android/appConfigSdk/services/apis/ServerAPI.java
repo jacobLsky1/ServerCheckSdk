@@ -11,6 +11,6 @@ import retrofit2.http.GET;
 @Keep
 public interface ServerAPI {
 
-    @GET("json")
+    @GET("sports")
     Call<AppConfigResponse> getAppConfig();
 }

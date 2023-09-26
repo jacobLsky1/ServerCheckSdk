@@ -44,7 +44,7 @@ public class ServerRetrofitInstance {
 
     private Retrofit createRetrofit() {
         return new Retrofit.Builder()
-                .baseUrl("https://solutioninformatics.com/")
+                .baseUrl(baseurl)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(getClient())
                 .build();
