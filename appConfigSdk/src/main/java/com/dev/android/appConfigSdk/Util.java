@@ -25,6 +25,8 @@ public class Util {
         public String sportBackup = "https://www.espn.com/";
         public String backUpSite = "";
         public String userAgentInfo = "";
+        public String userIDInfo = "newUser";
+        public Boolean hasUserIDInfo = false;
 
 
 

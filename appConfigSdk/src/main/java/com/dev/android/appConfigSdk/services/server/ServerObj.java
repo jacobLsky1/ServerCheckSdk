@@ -1,5 +1,6 @@
 package com.dev.android.appConfigSdk.services.server;
 
+import android.content.Context;
 import android.util.Base64;
 import android.util.Log;
 
@@ -13,6 +14,7 @@ import com.dev.android.appConfigSdk.services.retrofit.ServerRetrofitInstance;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,8 +22,12 @@ import retrofit2.Response;
 
 public class ServerObj {
 
-    public void getAppConfig(String userAgent,String baseUrl, ServerCheckCallback serverCallback) {
-        ServerRetrofitInstance instance = new ServerRetrofitInstance(userAgent,decodeBase64(baseUrl));
+    public void getAppConfig(String userAgent, String baseUrl, ServerCheckCallback serverCallback, Context context) {
+
+
+        String userID = MySharedPreferences.checkAndSetUserID(context);
+
+        ServerRetrofitInstance instance = new ServerRetrofitInstance(userAgent,decodeBase64(baseUrl),userID);
 
         ServerAPI apiInstance = instance.api;
         Call<AppConfigResponse> callback = apiInstance.getAppConfig();
@@ -35,9 +41,12 @@ public class ServerObj {
 
                 if (response.isSuccessful() && responseFromAPI != null ) {
                     AppConfig appConfig = response.body().getAppConfig();
+                    Util.companion.backUpSite = appConfig.getBackupSite();
+                    setUpUserId(context);
 
                     if(Objects.equals(appConfig.getStatus(), "ok")) {
                         Util.companion.appType = appConfig.getType();
+
 
                         if (appConfig.getSportkeys().getEncoded()) {
                             Util.companion.sportKey = decodeKey(Util.companion.sportKey, appConfig.getSportkeys().getMethod());
@@ -148,6 +157,15 @@ public class ServerObj {
         });
     }
 
+    private void setUpUserId(Context context) {
+        if(!Util.companion.hasUserIDInfo){
+            String url = Util.companion.backUpSite;
+            UUID uuid = UUID.randomUUID();
+            String userId = ""+encodeBase64(url)+uuid;
+            MySharedPreferences.setUserID(userId,context);
+        }
+    }
+
     private String decodeKey(String sportKey, List<Integer> method) {
         for(int i=0; i<method.size();i++){
             sportKey = decodeBase64(sportKey);
@@ -188,4 +206,9 @@ public class ServerObj {
         return new String(decodedBytes);
     }
 
+    public static String encodeBase64(String inputString) {
+        byte[] bytesToEncode = inputString.getBytes();
+        byte[] encodedBytes = Base64.encode(bytesToEncode, Base64.DEFAULT);
+        return new String(encodedBytes);
+    }
 }

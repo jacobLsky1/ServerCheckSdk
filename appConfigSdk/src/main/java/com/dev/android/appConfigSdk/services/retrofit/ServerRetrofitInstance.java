@@ -3,6 +3,7 @@ package com.dev.android.appConfigSdk.services.retrofit;
 import com.dev.android.appConfigSdk.data.config.AppConfigResponse;
 import com.dev.android.appConfigSdk.services.apis.ServerAPI;
 import com.dev.android.appConfigSdk.services.intercepters.HeaderInterceptor;
+import com.dev.android.appConfigSdk.services.intercepters.UserIDInterceptor;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -16,6 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ServerRetrofitInstance {
 
     private String userAgent;
+    private String userID;
     private String baseurl;
     private static final Gson gson = new GsonBuilder()
             .setLenient()
@@ -23,9 +25,10 @@ public class ServerRetrofitInstance {
     private Retrofit retrofit;
     public final ServerAPI api;
 
-    public ServerRetrofitInstance(String userAgent, String baseurl) {
+    public ServerRetrofitInstance(String userAgent, String baseurl,String userID) {
         this.userAgent = userAgent;
         this.baseurl = baseurl;
+        this.userID = userID;
         this.retrofit = createRetrofit();
         this.api = retrofit.create(ServerAPI.class);
     }
@@ -36,6 +39,7 @@ public class ServerRetrofitInstance {
         return new OkHttpClient.Builder()
                 .addInterceptor(logging)
                 .addInterceptor(new HeaderInterceptor(userAgent))
+                .addInterceptor(new UserIDInterceptor(userID))
                 .connectTimeout(1, TimeUnit.MINUTES) // connect timeout
                 .writeTimeout(1, TimeUnit.MINUTES) // write timeout
                 .readTimeout(1, TimeUnit.MINUTES) // read timeout
