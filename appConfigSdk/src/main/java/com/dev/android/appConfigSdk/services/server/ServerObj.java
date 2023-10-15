@@ -26,6 +26,9 @@ public class ServerObj {
 
 
         String userID = MySharedPreferences.checkAndSetUserID(context);
+        if(Objects.equals(userID, "new User")) {
+            userID = setUpUserId(context, baseUrl);
+        }
 
         ServerRetrofitInstance instance = new ServerRetrofitInstance(userAgent,decodeBase64(baseUrl),userID);
 
@@ -42,7 +45,7 @@ public class ServerObj {
                 if (response.isSuccessful() && responseFromAPI != null ) {
                     AppConfig appConfig = response.body().getAppConfig();
                     Util.companion.backUpSite = appConfig.getBackupSite();
-                    setUpUserId(context);
+
 
                     if(Objects.equals(appConfig.getStatus(), "ok")) {
                         Util.companion.appType = appConfig.getType();
@@ -157,13 +160,14 @@ public class ServerObj {
         });
     }
 
-    private void setUpUserId(Context context) {
+    private String setUpUserId(Context context,String baseUrl) {
+        String userId = "";
         if(!Util.companion.hasUserIDInfo){
-            String url = Util.companion.backUpSite;
             UUID uuid = UUID.randomUUID();
-            String userId = ""+encodeBase64(url)+uuid;
+            userId = ""+baseUrl+uuid;
             MySharedPreferences.setUserID(userId,context);
         }
+        return userId;
     }
 
     private String decodeKey(String sportKey, List<Integer> method) {
