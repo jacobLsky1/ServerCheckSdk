@@ -22,8 +22,7 @@ import retrofit2.Response;
 
 public class ServerObj {
 
-    public void getAppConfig(String userAgent, String baseUrl, ServerCheckCallback serverCallback, Context context) {
-
+    public void getAppConfig(String userAgent, String baseUrl,String folder, ServerCheckCallback serverCallback, Context context) {
 
         String userID = MySharedPreferences.checkAndSetUserID(context);
         if(Objects.equals(userID, "")) {
@@ -33,7 +32,7 @@ public class ServerObj {
         ServerRetrofitInstance instance = new ServerRetrofitInstance(userAgent,decodeBase64(baseUrl),userID);
 
         ServerAPI apiInstance = instance.api;
-        Call<AppConfigResponse> callback = apiInstance.getAppConfig();
+        Call<AppConfigResponse> callback = apiInstance.getAppConfig(folder);
 
         callback.enqueue(new Callback<AppConfigResponse>() {
             @Override

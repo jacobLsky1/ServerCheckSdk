@@ -7,10 +7,11 @@ import com.dev.android.appConfigSdk.data.config.AppConfigResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 @Keep
 public interface ServerAPI {
 
-    @GET("sports")
-    Call<AppConfigResponse> getAppConfig();
+    @GET("{path}")
+    Call<AppConfigResponse> getAppConfig(@Path("path")String path);
 }
