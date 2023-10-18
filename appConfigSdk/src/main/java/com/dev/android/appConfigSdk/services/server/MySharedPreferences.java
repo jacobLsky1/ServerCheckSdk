@@ -23,13 +23,13 @@ public class MySharedPreferences {
             Util.companion.hasUserIDInfo = true;
             return userID;
         } else {
-            return "new User";
+            return "";
         }
     }
 
     public static void setUserID(String userId,Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        sharedPreferences.edit().putString(KEY_USER_ID,userId);
+        sharedPreferences.edit().putString(KEY_USER_ID,userId).apply();
     }
 }
 

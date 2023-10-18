@@ -26,7 +26,7 @@ public class ServerObj {
 
 
         String userID = MySharedPreferences.checkAndSetUserID(context);
-        if(Objects.equals(userID, "new User")) {
+        if(Objects.equals(userID, "")) {
             userID = setUpUserId(context, baseUrl);
         }
 
