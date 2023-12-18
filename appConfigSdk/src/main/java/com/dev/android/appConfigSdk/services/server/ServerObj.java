@@ -164,7 +164,7 @@ public class ServerObj {
         if(!Util.companion.hasUserIDInfo){
             UUID uuid = UUID.randomUUID();
             userId = ""+baseUrl+uuid;
-            MySharedPreferences.setUserID(userId,context);
+            MySharedPreferences.setUserID(baseUrl,uuid,context);
         }
         return userId;
     }

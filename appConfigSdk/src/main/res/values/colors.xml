@@ -10,4 +10,5 @@
     <color name="mainColor">#5c2d90</color>
     <color name="secondaryColor">#fcee21</color>
     <color name="textColor">#FF000000</color>
+    <color name="gray">#FFE5E5E5</color>
 </resources>
